@@ -98,7 +98,7 @@ function App() {
             <Modal open={errorUpdatingPlaces} onClose={handleError}>
                 {errorUpdatingPlaces && (
                     <Error
-                        title="An error occurred!"
+                        title="An error occurred!1"
                         message={errorUpdatingPlaces.message}
                         onConfirm={handleError}
                     />

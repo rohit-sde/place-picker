@@ -23,7 +23,7 @@ export async function fetchUserPlaces() {
 export async function updateUserPlaces(places) {
     const response = await fetch("http://localhost:1000/user-places", {
         method: "Put",
-        body: Json.stringify({ places }),
+        body: JSON.stringify({ places }),
         headers: {
             "Content-Type": "application/json",
         },
