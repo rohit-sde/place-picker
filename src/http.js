@@ -1,5 +1,7 @@
+import { CONFIG } from "../config";
+
 export async function fetchAvailablePlaces() {
-  const response = await fetch("http://localhost:1000/places");
+  const response = await fetch(`${CONFIG.apiBaseUrl}/places`);
   const resData = await response.json();
 
   if (!response.ok) {
@@ -10,7 +12,7 @@ export async function fetchAvailablePlaces() {
 }
 
 export async function fetchUserPlaces() {
-  const response = await fetch("http://localhost:1000/user-places");
+  const response = await fetch(`${CONFIG.apiBaseUrl}/user-places`);
   const resData = await response.json();
 
   if (!response.ok) {
@@ -21,7 +23,7 @@ export async function fetchUserPlaces() {
 }
 
 export async function updateUserPlaces(places) {
-  const response = await fetch("http://localhost:1000/user-places", {
+  const response = await fetch(`${CONFIG.apiBaseUrl}/user-places`, {
     method: "Put",
     body: JSON.stringify({ places }),
     headers: {

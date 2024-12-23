@@ -1,3 +1,5 @@
+import { CONFIG } from "../../config";
+
 export default function Places({
   title,
   places,
@@ -20,7 +22,7 @@ export default function Places({
             <li key={place.id} className="place-item">
               <button onClick={() => onSelectPlace(place)}>
                 <img
-                  src={`http://localhost:1000/${place.image.src}`}
+                  src={`${CONFIG.backendBaseUrl}/images/${place.image.src}`}
                   alt={place.image.alt}
                 />
                 <h3>{place.title}</h3>
