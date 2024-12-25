@@ -27,6 +27,10 @@ app.use(
 
 app.use(express.static("public"));
 
+app.get("*", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "public", "index.html"));
+});
+
 app.listen(CONFIG.port, CONFIG.host, () => {
   console.info(`Server is running at http://${CONFIG.host}:${CONFIG.port}`);
 });
