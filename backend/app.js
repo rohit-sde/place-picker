@@ -1,5 +1,6 @@
 import bodyParser from "body-parser";
 import express from "express";
+import path from "path";
 import { CONFIG } from "./config.mjs";
 import { router } from "./routes.mjs";
 
